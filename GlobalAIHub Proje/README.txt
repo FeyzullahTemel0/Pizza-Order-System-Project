@@ -20,16 +20,10 @@ CREATE TABLE `ordersystem` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
 
-4) Sorgularınızı yaparken sql tablolarının estetik görünmesi için query'nizde aşağıdaki kodları yapışıtırıp execute yapmanız yeterlidir.
-   Sütun isimleri estetik hale gelirken aynı zamanda tüm verileri de görebilirisiniz.
 
-SELECT id as 'ID',
-credit_card_username as 'Kart Sahibi',
-userid as 'TC Kimlik',
-order_description as 'Sipariş Bilgisi',
-order_time as 'Sipariş Zamanı',
-credit_card_number as 'KK Numarası',
-credit_card_last_time as 'KK Son Geçerlilik Tarihi',
-cvv as 'CVV',
-credit_cadt_password as 'Kart Şifresi'
-FROM projeglobalaıhub.ordersystem;
+
+
+#### Yapılan Yenilikler 
+    1) Pizza seçiminden sonra pizza boyutu seçimi eklendi
+    2) Pizza boyutunun seçimine göre fiyat hesaplaması eklendi
+    3) Ödeme ekranı için toplam hesaplama düzenlendi.Güncel
