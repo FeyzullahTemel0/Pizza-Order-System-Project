@@ -157,10 +157,12 @@ def SuccesMessage():
 def payment_Process():
   os.system('cls')
   if pizza_name == "Klasik Pizza":
+    
     name = pizza_name
     liste = convertList(sosListe)
     size_name = sizes[0]
     icecek_ismi = convertList(soguk_icecekler)
+    
     if icecek_ismi in soguk_icecekler:
       icecek_ismi = convertList(soguk_icecekler)
       print('Total prices for Pizza: {pizza} + Sauces: {sos} + Sizes: {size} + İcecek:{icecek} = {totalPrice}'.format(pizza = name,sos = liste, totalPrice = total_price,size =size_name,icecek= icecek_ismi))
@@ -178,7 +180,9 @@ def payment_Process():
       db.commit()
       print("Ödeme işlemi başarılı.\nSipariş başarıyla alındı.\nBizi tercih ettiğiniz için teşekkürler\nYine bekleriz....")
       exit()
+      
     else:
+      
       print('Total prices for Pizza: {pizza} + Sauces: {sos} + Sizes: {size}= {totalPrice}'.format(pizza = name,sos = liste, totalPrice = total_price,size =size_name))
       credit_card_username = input('Name on credit card: ')
       userid = input("Enter identification number: ")
@@ -196,10 +200,12 @@ def payment_Process():
       exit()
 
   if pizza_name == "Margeritha Pizza":
+    
     name = pizza_name
     size_name = sizes[0]
     liste = convertList(sosListe)
     icecek_ismi = convertList(soguk_icecekler)
+    
     if icecek_ismi in soguk_icecekler: 
       icecek_ismi = convertList(soguk_icecekler)
       print('Total prices for Pizza: {pizza} + Sauces: {sos} + Sizes: {size} + İcecek:{icecek} = {totalPrice}'.format(pizza = name,sos = liste, totalPrice = total_price,size =size_name,icecek= icecek_ismi))
@@ -216,7 +222,9 @@ def payment_Process():
       db.commit()
       print("Ödeme işlemi başarılı.\nSipariş başarıyla alındı.\nBizi tercih ettiğiniz için teşekkürler\nYine bekleriz....")
       exit()
+      
   else:
+    
       name = pizza_name
       size_name = sizes[0]
       liste = convertList(sosListe)
@@ -236,11 +244,14 @@ def payment_Process():
       exit()
 
   if pizza_name == "Türk Pizza":
+    
     name = pizza_name
     size_name = sizes[0]
     liste = convertList(sosListe)
     icecek_ismi = convertList(soguk_icecekler)
+    
     if icecek_ismi in soguk_icecekler:
+      
       icecek_ismi = convertList(soguk_icecekler)
       print('Total prices for Pizza: {pizza} + Sauces: {sos} + Sizes: {size} + İcecek:{icecek} = {totalPrice}'.format(pizza = name,sos = liste, totalPrice = total_price,size =size_name,icecek= icecek_ismi))
       credit_card_username = input('Name on credit card: ')
@@ -256,7 +267,9 @@ def payment_Process():
       db.commit()
       print("Ödeme işlemi başarılı.\nSipariş başarıyla alındı.\nBizi tercih ettiğiniz için teşekkürler\nYine bekleriz....")
       exit()
+      
     else:
+      
       name = pizza_name
       size_name = sizes[0]
       liste = convertList(sosListe)
@@ -274,14 +287,16 @@ def payment_Process():
       db.commit()
       print("Ödeme işlemi başarılı.\nSipariş başarıyla alındı.\nBizi tercih ettiğiniz için teşekkürler\nYine bekleriz....")
       exit()
-
 
   if pizza_name == "Dominos Pizza":
+    
     name = pizza_name
     size_name = sizes[0]
     liste = convertList(sosListe)
     icecek_ismi = convertList(soguk_icecekler)
+    
     if icecek_ismi in soguk_icecekler:
+      
       icecek_ismi = convertList(soguk_icecekler)
       print('Total prices for Pizza: {pizza} + Sauces: {sos} + Sizes: {size} + İcecek:{icecek} = {totalPrice}'.format(pizza = name,sos = liste, totalPrice = total_price,size =size_name,icecek= icecek_ismi))
       credit_card_username = input('Name on credit card: ')
@@ -297,7 +312,9 @@ def payment_Process():
       db.commit()
       print("Ödeme işlemi başarılı.\nSipariş başarıyla alındı.\nBizi tercih ettiğiniz için teşekkürler\nYine bekleriz....")
       exit()
+      
     else:
+      
       name = pizza_name
       size_name = sizes[0]
       liste = convertList(sosListe)
@@ -315,7 +332,6 @@ def payment_Process():
       db.commit()
       print("Ödeme işlemi başarılı.\nSipariş başarıyla alındı.\nBizi tercih ettiğiniz için teşekkürler\nYine bekleriz....")
       exit()
-
 
 def convertTuple(tup):
   pizza_name = ''.join(tup)
@@ -358,14 +374,19 @@ if __name__ == "__main__":
 
   ayran = "Ayran"
   ayran_price = 5
+  
   cola = "Coca-Cola"
   cola_price = 12
+  
   gazoz = "Gazoz"
   gazoz_price = 12
+  
   fanta = "Fanta"
   fanta_price = 12
+  
   icetea1 = "Ice-Tea (Şeftali)"
   icetea1_price = 15
+  
   icetea2 = "Ice-Tea (Limon)"
   icetea2_price = 15
 
@@ -373,9 +394,9 @@ if __name__ == "__main__":
 if selection == "1":
   os.system('cls')
   classic_pizza_price = pizCls.get_cost()
-  print(convertTuple(pizCls.get_description()) , ' seçtiniz')
+  print(convertTuple(pizCls.get_description()) , ' seçtiniz.')
   time.sleep(3)
-
+  
   df3 = pd.read_csv("PİzzaBoyutları.txt")
   print(df3.head(5))
   select_size = input("Pizza boyutunuzu seçiniz: ")
