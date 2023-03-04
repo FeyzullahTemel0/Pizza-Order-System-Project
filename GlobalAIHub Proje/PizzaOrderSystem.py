@@ -8,8 +8,8 @@ import random
 
 #Mysql bağlantı kodlarımız 
 db = pymysql.connect(host='localhost',
-                        user='root',
-                        password='feyzullah0348', # Bilgisayarında Mysql olanlar için user ve password alanları kendi mysqllerine göre yazılmalıdır.
+                        user='*******',
+                        password='******', # Bilgisayarında Mysql olanlar için user ve password alanları kendi mysqllerine göre yazılmalıdır.
                         db='projeglobalaıhub',
                         cursorclass=pymysql.cursors.DictCursor)
 connection = db.cursor()
@@ -322,8 +322,9 @@ if selection == "1":
           sosPrice = sosPrice + sosZeytin_price
           time.sleep(1)
           os.system('cls')
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
 
-        
       if sos == "2":
         sos_name = convertTuple(sosMantar.get_description())
 
@@ -340,6 +341,8 @@ if selection == "1":
           sosPrice = sosPrice + sosMantar_price
           time.sleep(1)
           os.system('cls')
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
 
       if sos == "3":
         sos_name = convertTuple(sosKeciPeyniri.get_description())
@@ -357,6 +360,8 @@ if selection == "1":
           sosPrice = sosPrice + sosKeciPeyniri_price
           time.sleep(1)
           os.system('cls')
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
 
       if sos == "4":
         sos_name = convertTuple(sosEt.get_description())
@@ -373,7 +378,9 @@ if selection == "1":
           sosPrice = sosPrice + sosEt_price
           time.sleep(1)
           os.system('cls')
-      
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
+
       if sos == "5":
         sos_name = convertTuple(sosSogan.get_description())
 
@@ -390,6 +397,8 @@ if selection == "1":
           sosPrice = sosPrice + sosSogan_price
           time.sleep(1)
           os.system('cls')
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
 
       if sos == "6":
         sos_name = convertTuple(sosMisir.get_description())
@@ -407,6 +416,8 @@ if selection == "1":
           sosPrice = sosPrice + sosMisir_price
           time.sleep(1)
           os.system('cls')
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
 
   else:
     total_price = classic_pizza_price + sosPrice
@@ -456,8 +467,9 @@ if selection == "2":
           sosPrice = sosPrice + sosZeytin_price
           time.sleep(1)
           os.system('cls')
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
 
-        
       if sos == "2":
         sos_name = convertTuple(sosMantar.get_description())
 
@@ -474,6 +486,8 @@ if selection == "2":
           sosPrice = sosPrice + sosMantar_price
           time.sleep(1)
           os.system('cls')
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
 
       if sos == "3":
         sos_name = convertTuple(sosKeciPeyniri.get_description())
@@ -491,6 +505,8 @@ if selection == "2":
           sosPrice = sosPrice + sosKeciPeyniri_price
           time.sleep(1)
           os.system('cls')
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
 
       if sos == "4":
         sos_name = convertTuple(sosEt.get_description())
@@ -507,7 +523,9 @@ if selection == "2":
           sosPrice = sosPrice + sosEt_price
           time.sleep(1)
           os.system('cls')
-      
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
+
       if sos == "5":
         sos_name = convertTuple(sosSogan.get_description())
 
@@ -524,6 +542,8 @@ if selection == "2":
           sosPrice = sosPrice + sosSogan_price
           time.sleep(1)
           os.system('cls')
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
 
       if sos == "6":
         sos_name = convertTuple(sosMisir.get_description())
@@ -541,6 +561,8 @@ if selection == "2":
           sosPrice = sosPrice + sosMisir_price
           time.sleep(1)
           os.system('cls')
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
 
   else:
     total_price = mar_pizza_price + sosPrice
@@ -591,7 +613,8 @@ if selection == "3":
           sosPrice = sosPrice + sosZeytin_price
           time.sleep(1)
           os.system('cls')
-
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
         
       if sos == "2":
         sos_name = convertTuple(sosMantar.get_description())
@@ -609,7 +632,8 @@ if selection == "3":
           sosPrice = sosPrice + sosMantar_price
           time.sleep(1)
           os.system('cls')
-
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
       if sos == "3":
         sos_name = convertTuple(sosKeciPeyniri.get_description())
 
@@ -626,6 +650,8 @@ if selection == "3":
           sosPrice = sosPrice + sosKeciPeyniri_price
           time.sleep(1)
           os.system('cls')
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
 
       if sos == "4":
         sos_name = convertTuple(sosEt.get_description())
@@ -642,7 +668,8 @@ if selection == "3":
           sosPrice = sosPrice + sosEt_price
           time.sleep(1)
           os.system('cls')
-      
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')      
       if sos == "5":
         sos_name = convertTuple(sosSogan.get_description())
 
@@ -659,6 +686,8 @@ if selection == "3":
           sosPrice = sosPrice + sosSogan_price
           time.sleep(1)
           os.system('cls')
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
 
       if sos == "6":
         sos_name = convertTuple(sosMisir.get_description())
@@ -676,6 +705,8 @@ if selection == "3":
           sosPrice = sosPrice + sosMisir_price
           time.sleep(1)
           os.system('cls')
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
 
   else:
     total_price = tr_pizza_price + sosPrice
@@ -725,7 +756,8 @@ if selection == "4":
           sosPrice = sosPrice + sosZeytin_price
           time.sleep(1)
           os.system('cls')
-
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
         
       if sos == "2":
         sos_name = convertTuple(sosMantar.get_description())
@@ -743,6 +775,8 @@ if selection == "4":
           sosPrice = sosPrice + sosMantar_price
           time.sleep(1)
           os.system('cls')
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
 
       if sos == "3":
         sos_name = convertTuple(sosKeciPeyniri.get_description())
@@ -760,6 +794,8 @@ if selection == "4":
           sosPrice = sosPrice + sosKeciPeyniri_price
           time.sleep(1)
           os.system('cls')
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
 
       if sos == "4":
         sos_name = convertTuple(sosEt.get_description())
@@ -776,7 +812,9 @@ if selection == "4":
           sosPrice = sosPrice + sosEt_price
           time.sleep(1)
           os.system('cls')
-      
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
+
       if sos == "5":
         sos_name = convertTuple(sosSogan.get_description())
 
@@ -793,6 +831,8 @@ if selection == "4":
           sosPrice = sosPrice + sosSogan_price
           time.sleep(1)
           os.system('cls')
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
 
       if sos == "6":
         sos_name = convertTuple(sosMisir.get_description())
@@ -810,6 +850,8 @@ if selection == "4":
           sosPrice = sosPrice + sosMisir_price
           time.sleep(1)
           os.system('cls')
+      else:
+        print('Hatalı seçim yaptınız.!. Tekrar deneyiniz...')
 
   else:
     total_price = do_pizza_price + sosPrice
