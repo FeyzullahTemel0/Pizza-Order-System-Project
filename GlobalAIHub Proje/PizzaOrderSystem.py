@@ -8,8 +8,8 @@ import random
 
 #Mysql bağlantı kodlarımız 
 db = pymysql.connect(host='localhost',
-                        user='******',
-                        password='******', # Bilgisayarında Mysql olanlar için user ve password alanları kendi mysqllerine göre yazılmalıdır.
+                        user='root',
+                        password='feyzullah0348', # Bilgisayarında Mysql olanlar için user ve password alanları kendi mysqllerine göre yazılmalıdır.
                         db='projeglobalaıhub',
                         cursorclass=pymysql.cursors.DictCursor)
 connection = db.cursor()
@@ -409,6 +409,8 @@ if selection == "1":
           os.system('cls')
 
   else:
+    total_price = classic_pizza_price + sosPrice
+    pizza_name = convertTuple(pizCls.get_description())
     payment_Process()
 
   os.system('cls')
@@ -541,6 +543,8 @@ if selection == "2":
           os.system('cls')
 
   else:
+    total_price = mar_pizza_price + sosPrice
+    pizza_name = convertTuple(pizMar.get_description())
     payment_Process()
 
   os.system('cls')
@@ -674,6 +678,8 @@ if selection == "3":
           os.system('cls')
 
   else:
+    total_price = tr_pizza_price + sosPrice
+    pizza_name = convertTuple(pizTurk.get_description())
     payment_Process()
 
   os.system('cls')
@@ -806,6 +812,8 @@ if selection == "4":
           os.system('cls')
 
   else:
+    total_price = do_pizza_price + sosPrice
+    pizza_name = convertTuple(pizDo.get_description())
     payment_Process()
 
   os.system('cls')
