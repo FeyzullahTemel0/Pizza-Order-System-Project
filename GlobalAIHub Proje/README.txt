@@ -27,3 +27,7 @@ CREATE TABLE `ordersystem` (
     1) Pizza seçiminden sonra pizza boyutu seçimi eklendi
     2) Pizza boyutunun seçimine göre fiyat hesaplaması eklendi
     3) Ödeme ekranı için toplam hesaplama düzenlendi.Güncel
+    4) İçecek seçimi eklendi
+    5) İçecek seçiminden sonraki hesaplamalar düzenlendi
+    6) Database kaydı test edildi
+    7) Hatırlatma: Projeyi çalıştırmadan önce mysql server kurulu olduğundan emin olun.
