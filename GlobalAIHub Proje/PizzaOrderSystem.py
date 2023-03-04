@@ -8,8 +8,8 @@ import random
 
 #Mysql bağlantı kodlarımız 
 db = pymysql.connect(host='localhost',
-                        user='root',
-                        password='feyzullah0348', # Bilgisayarında Mysql olanlar için user ve password alanları kendi mysqllerine göre yazılmalıdır.
+                        user='*******',
+                        password='********', # Bilgisayarında Mysql olanlar için user ve password alanları kendi mysqllerine göre yazılmalıdır.
                         db='projeglobalaıhub',
                         cursorclass=pymysql.cursors.DictCursor)
 connection = db.cursor()
