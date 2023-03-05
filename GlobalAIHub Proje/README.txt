@@ -11,7 +11,7 @@ CREATE TABLE `ordersystem` (
   `id` int NOT NULL AUTO_INCREMENT,
   `credit_card_username` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `userid` int NOT NULL,
-  `order_description` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
+  `order_description` varchar(150) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `order_time` datetime NOT NULL,
   `credit_card_number` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   `credit_card_last_time` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
