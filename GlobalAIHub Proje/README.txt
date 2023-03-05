@@ -31,3 +31,19 @@ CREATE TABLE `ordersystem` (
     5) İçecek seçiminden sonraki hesaplamalar düzenlendi
     6) Database kaydı test edildi
     7) Hatırlatma: Projeyi çalıştırmadan önce mysql server kurulu olduğundan emin olun.
+    
+    
+    -----------------------------------------------------------------------------------------------------------
+*** Mysql sütun düzenleme kodları
+SELECT id as 'ID',
+credit_card_username as 'Kart Sahibi',
+userid as 'TC Kimlik',
+order_description as 'Sipariş Bilgisi',
+order_time as 'Sipariş Zamanı',
+credit_card_number as 'KK Numarası',
+credit_card_last_time as 'KK Son Geçerlilik Tarihi',
+cvv as 'CVV',
+credit_cadt_password as 'Kart Şifresi'
+FROM projeglobalaıhub.ordersystem;
+    
+    
