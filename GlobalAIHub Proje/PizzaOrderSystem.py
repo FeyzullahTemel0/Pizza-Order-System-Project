@@ -8,8 +8,8 @@ import random
 
 #Mysql bağlantı kodlarımız 
 db = pymysql.connect(host='localhost',
-                        user='*****',
-                        password='******', # Bilgisayarında Mysql olanlar için user ve password alanları kendi mysqllerine göre yazılmalıdır.
+                        user='******',
+                        password='********', # Bilgisayarında Mysql olanlar için user ve password alanları kendi mysqllerine göre yazılmalıdır.
                         db='projeglobalaıhub',
                         cursorclass=pymysql.cursors.DictCursor)
 connection = db.cursor()
@@ -88,7 +88,6 @@ class Decorator(Pizza):
     self._description = description,
     self._cost = cost
 
-
   #Encapsulation ile cost ve description tanımlanması
   def get_description(self):
     return self._description
@@ -130,10 +129,8 @@ class Misir(Decorator):
 
 # Sos nesnelerini tanımladık.
 sosZeytin = Zeytin("Siyah Zeytin",5)
-
 # Fiyatın cost methoduna açıklamanın ise description methoduna atanmasının doğruluğunu kontrol etmek için yazdırdık.
 # print("Sos İsmi:{acıklama} \nSos Fiyatı:{fiyat} ".format(acıklama = sosZeytin.get_description(),fiyat = sosZeytin.get_cost()))
-
 sosMantar = Mantar("Kültür Mantarı",12)
 # print("Sos İsmi:{acıklama} \nSos Fiyatı:{fiyat} ".format(acıklama = sosmantar.get_description(),fiyat = sosmantar.get_cost()))
 
@@ -157,12 +154,10 @@ def SuccesMessage():
 def payment_Process():
   os.system('cls')
   if pizza_name == "Klasik Pizza":
-    
     name = pizza_name
     liste = convertList(sosListe)
     size_name = sizes[0]
     icecek_ismi = convertList(soguk_icecekler)
-    
     if icecek_ismi in soguk_icecekler:
       icecek_ismi = convertList(soguk_icecekler)
       print('Total prices for Pizza: {pizza} + Sauces: {sos} + Sizes: {size} + İcecek:{icecek} = {totalPrice}'.format(pizza = name,sos = liste, totalPrice = total_price,size =size_name,icecek= icecek_ismi))
@@ -180,9 +175,7 @@ def payment_Process():
       db.commit()
       print("Ödeme işlemi başarılı.\nSipariş başarıyla alındı.\nBizi tercih ettiğiniz için teşekkürler\nYine bekleriz....")
       exit()
-      
     else:
-      
       print('Total prices for Pizza: {pizza} + Sauces: {sos} + Sizes: {size}= {totalPrice}'.format(pizza = name,sos = liste, totalPrice = total_price,size =size_name))
       credit_card_username = input('Name on credit card: ')
       userid = input("Enter identification number: ")
@@ -200,12 +193,10 @@ def payment_Process():
       exit()
 
   if pizza_name == "Margeritha Pizza":
-    
     name = pizza_name
     size_name = sizes[0]
     liste = convertList(sosListe)
     icecek_ismi = convertList(soguk_icecekler)
-    
     if icecek_ismi in soguk_icecekler: 
       icecek_ismi = convertList(soguk_icecekler)
       print('Total prices for Pizza: {pizza} + Sauces: {sos} + Sizes: {size} + İcecek:{icecek} = {totalPrice}'.format(pizza = name,sos = liste, totalPrice = total_price,size =size_name,icecek= icecek_ismi))
@@ -222,9 +213,7 @@ def payment_Process():
       db.commit()
       print("Ödeme işlemi başarılı.\nSipariş başarıyla alındı.\nBizi tercih ettiğiniz için teşekkürler\nYine bekleriz....")
       exit()
-      
-  else:
-    
+    else:
       name = pizza_name
       size_name = sizes[0]
       liste = convertList(sosListe)
@@ -244,14 +233,11 @@ def payment_Process():
       exit()
 
   if pizza_name == "Türk Pizza":
-    
     name = pizza_name
     size_name = sizes[0]
     liste = convertList(sosListe)
     icecek_ismi = convertList(soguk_icecekler)
-    
     if icecek_ismi in soguk_icecekler:
-      
       icecek_ismi = convertList(soguk_icecekler)
       print('Total prices for Pizza: {pizza} + Sauces: {sos} + Sizes: {size} + İcecek:{icecek} = {totalPrice}'.format(pizza = name,sos = liste, totalPrice = total_price,size =size_name,icecek= icecek_ismi))
       credit_card_username = input('Name on credit card: ')
@@ -267,9 +253,7 @@ def payment_Process():
       db.commit()
       print("Ödeme işlemi başarılı.\nSipariş başarıyla alındı.\nBizi tercih ettiğiniz için teşekkürler\nYine bekleriz....")
       exit()
-      
     else:
-      
       name = pizza_name
       size_name = sizes[0]
       liste = convertList(sosListe)
@@ -288,15 +272,13 @@ def payment_Process():
       print("Ödeme işlemi başarılı.\nSipariş başarıyla alındı.\nBizi tercih ettiğiniz için teşekkürler\nYine bekleriz....")
       exit()
 
+
   if pizza_name == "Dominos Pizza":
-    
     name = pizza_name
     size_name = sizes[0]
     liste = convertList(sosListe)
     icecek_ismi = convertList(soguk_icecekler)
-    
     if icecek_ismi in soguk_icecekler:
-      
       icecek_ismi = convertList(soguk_icecekler)
       print('Total prices for Pizza: {pizza} + Sauces: {sos} + Sizes: {size} + İcecek:{icecek} = {totalPrice}'.format(pizza = name,sos = liste, totalPrice = total_price,size =size_name,icecek= icecek_ismi))
       credit_card_username = input('Name on credit card: ')
@@ -308,13 +290,11 @@ def payment_Process():
       credit_card_last_time = input('Enter credit card last time: ')
       cvv = input("Enter CVV: ")
       credit_card_password = input("Enter credit card password: ")
-      connection.execute('INSERT INTO ordersystem VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)',(None,credit_card_username,userid,order_description,order_time,credit_card_number,credit_card_last_time,cvv,   credit_card_password))
+      connection.execute('INSERT INTO ordersystem VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)',(None,credit_card_username,userid,order_description,order_time,credit_card_number,credit_card_last_time,cvv,credit_card_password))
       db.commit()
       print("Ödeme işlemi başarılı.\nSipariş başarıyla alındı.\nBizi tercih ettiğiniz için teşekkürler\nYine bekleriz....")
       exit()
-      
     else:
-      
       name = pizza_name
       size_name = sizes[0]
       liste = convertList(sosListe)
@@ -332,6 +312,7 @@ def payment_Process():
       db.commit()
       print("Ödeme işlemi başarılı.\nSipariş başarıyla alındı.\nBizi tercih ettiğiniz için teşekkürler\nYine bekleriz....")
       exit()
+
 
 def convertTuple(tup):
   pizza_name = ''.join(tup)
@@ -374,19 +355,14 @@ if __name__ == "__main__":
 
   ayran = "Ayran"
   ayran_price = 5
-  
   cola = "Coca-Cola"
   cola_price = 12
-  
   gazoz = "Gazoz"
   gazoz_price = 12
-  
   fanta = "Fanta"
   fanta_price = 12
-  
   icetea1 = "Ice-Tea (Şeftali)"
   icetea1_price = 15
-  
   icetea2 = "Ice-Tea (Limon)"
   icetea2_price = 15
 
@@ -394,9 +370,9 @@ if __name__ == "__main__":
 if selection == "1":
   os.system('cls')
   classic_pizza_price = pizCls.get_cost()
-  print(convertTuple(pizCls.get_description()) , ' seçtiniz.')
+  print(convertTuple(pizCls.get_description()) , ' seçtiniz')
   time.sleep(3)
-  
+
   df3 = pd.read_csv("PİzzaBoyutları.txt")
   print(df3.head(5))
   select_size = input("Pizza boyutunuzu seçiniz: ")
@@ -554,7 +530,6 @@ if selection == "1":
       total_price = classic_pizza_price + sosPrice + add_Price
       pizza_name = convertTuple(pizCls.get_description())
 
-
   icecek_ister_mi = input("İçecek ister misiniz(e/h): ")
   if icecek_ister_mi == "e":
     df4 = pd.read_csv("İcecekler.txt")
@@ -612,7 +587,14 @@ if selection == "1":
       payment_Process()
 
   else:
-    total_price = classic_pizza_price + sosPrice
+    if sizes[0] == kckBoy:
+      boyut = kckBoy_Price
+    if sizes[0] == ortBoy:
+      boyut = ortBoy_Price
+    if sizes[0] == bykBoy:
+      boyut = bykBoy_Price
+      
+    total_price = classic_pizza_price + sosPrice+ boyut
     print('\n Ödeme işlemi için yönlendiriliyorsunuz...')
     time.sleep(3)
     pizza_name = convertTuple(pizCls.get_description())
@@ -771,21 +753,18 @@ if selection == "2":
       add_Price = kckBoy_Price 
       total_price = mar_pizza_price + sosPrice + add_Price
       pizza_name = convertTuple(pizMar.get_description())
-      payment_Process()
 
     if ortBoy in sizes:
       size_name = sizes[0]
       add_Price = ortBoy_Price
       total_price = mar_pizza_price + sosPrice + add_Price
       pizza_name = convertTuple(pizMar.get_description())
-      payment_Process()
     
     if bykBoy in sizes:
       size_name = sizes[0]
       add_Price = bykBoy_Price
       total_price = mar_pizza_price + sosPrice + add_Price
       pizza_name = convertTuple(pizMar.get_description())
-      payment_Process()
 
   icecek_ister_mi = input("İçecek ister misiniz(e/h): ")
   if icecek_ister_mi == "e":
@@ -844,14 +823,21 @@ if selection == "2":
       payment_Process()
 
   else:
-    total_price = mar_pizza_price + sosPrice
+    if sizes[0] == kckBoy:
+      boyut = kckBoy_Price
+    if sizes[0] == ortBoy:
+      boyut = ortBoy_Price
+    if sizes[0] == bykBoy:
+      boyut = bykBoy_Price
+
+    total_price = mar_pizza_price + sosPrice+ boyut
     print('\n Ödeme işlemi için yönlendiriliyorsunuz...')
     time.sleep(3)
     pizza_name = convertTuple(pizMar.get_description())
     payment_Process()
 
   
-  
+#-------------------------------------------------------------------------------------------------
 if selection == "3":
   os.system('cls')
   tr_pizza_price = pizTurk.get_cost()
@@ -996,28 +982,25 @@ if selection == "3":
           SuccesMessage()
           time.sleep(1)
           os.system('cls')
-
   else:
     if kckBoy in sizes:
       size_name = sizes[0]
       add_Price = kckBoy_Price 
       total_price = tr_pizza_price + sosPrice + add_Price
       pizza_name = convertTuple(pizTurk.get_description())
-      payment_Process()
 
     if ortBoy in sizes:
       size_name = sizes[0]
       add_Price = ortBoy_Price
       total_price = tr_pizza_price + sosPrice + add_Price
       pizza_name = convertTuple(pizTurk.get_description())
-      payment_Process()
     
     if bykBoy in sizes:
       size_name = sizes[0]
       add_Price = bykBoy_Price
       total_price = tr_pizza_price + sosPrice + add_Price
       pizza_name = convertTuple(pizTurk.get_description())
-      payment_Process()
+      
   icecek_ister_mi = input("İçecek ister misiniz(e/h): ")
   if icecek_ister_mi == "e":
     df4 = pd.read_csv("İcecekler.txt")
@@ -1075,7 +1058,14 @@ if selection == "3":
       payment_Process()
 
   else:
-    total_price = tr_pizza_price + sosPrice
+    if sizes[0] == kckBoy:
+      boyut = kckBoy_Price
+    if sizes[0] == ortBoy:
+      boyut = ortBoy_Price
+    if sizes[0] == bykBoy:
+      boyut = bykBoy_Price
+      
+    total_price = tr_pizza_price + sosPrice + boyut
     print('\n Ödeme işlemi için yönlendiriliyorsunuz...')
     time.sleep(3)
     pizza_name = convertTuple(pizTurk.get_description())
@@ -1234,21 +1224,19 @@ if selection == "4":
       add_Price = kckBoy_Price 
       total_price = do_pizza_price + sosPrice + add_Price
       pizza_name = convertTuple(pizDo.get_description())
-      payment_Process()
 
     if ortBoy in sizes:
       size_name = sizes[0]
       add_Price = ortBoy_Price
       total_price = do_pizza_price + sosPrice + add_Price
       pizza_name = convertTuple(pizDo.get_description())
-      payment_Process()
     
     if bykBoy in sizes:
       size_name = sizes[0]
       add_Price = bykBoy_Price
       total_price = do_pizza_price + sosPrice + add_Price
       pizza_name = convertTuple(pizDo.get_description())
-      payment_Process()
+
   icecek_ister_mi = input("İçecek ister misiniz(e/h): ")
   if icecek_ister_mi == "e":
     df4 = pd.read_csv("İcecekler.txt")
@@ -1306,8 +1294,19 @@ if selection == "4":
       payment_Process()
 
   else:
-    total_price = do_pizza_price + sosPrice
+    if sizes[0] == kckBoy:
+      boyut = kckBoy_Price
+    if sizes[0] == ortBoy:
+      boyut = ortBoy_Price
+    if sizes[0] == bykBoy:
+      boyut = bykBoy_Price
+      
+    total_price = do_pizza_price + sosPrice + boyut
     print('\n Ödeme işlemi için yönlendiriliyorsunuz...')
     time.sleep(3)
     pizza_name = convertTuple(pizDo.get_description())
     payment_Process()
+
+
+    # Boy fiyatı güncellenmiyor bakılıcak 
+    # türk pizza seçimleri kontrol edilecek.
