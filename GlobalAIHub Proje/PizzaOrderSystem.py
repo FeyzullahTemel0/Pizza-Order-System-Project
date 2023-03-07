@@ -1306,7 +1306,5 @@ if selection == "4":
     time.sleep(3)
     pizza_name = convertTuple(pizDo.get_description())
     payment_Process()
-
-
-    # Boy fiyatı güncellenmiyor bakılıcak 
-    # türk pizza seçimleri kontrol edilecek.
+    
+    
