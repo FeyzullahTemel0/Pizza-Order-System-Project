@@ -9,7 +9,7 @@ import random
 #Mysql bağlantı kodlarımız 
 db = pymysql.connect(host='localhost',
                         user='******',
-                        password='********', # Bilgisayarında Mysql olanlar için user ve password alanları kendi mysqllerine göre yazılmalıdır.
+                        password='*********', # Bilgisayarında Mysql olanlar için user ve password alanları kendi mysqllerine göre yazılmalıdır.
                         db='projeglobalaıhub',
                         cursorclass=pymysql.cursors.DictCursor)
 connection = db.cursor()
@@ -151,6 +151,7 @@ sosMisir= Misir("Süt Mısır 35gr",9)
 def SuccesMessage():
   print('Sosunuz başarıyla siparişinize eklendi.')
 
+  # Her pizzanın uygulamadaki seçimlerine göre şekillenen ödeme ekranları bulunmakta burdan itibaren Klasik pizza ile başlamaktadır.
 def payment_Process():
   os.system('cls')
   if pizza_name == "Klasik Pizza":
@@ -1306,5 +1307,5 @@ if selection == "4":
     time.sleep(3)
     pizza_name = convertTuple(pizDo.get_description())
     payment_Process()
-    
+
     
