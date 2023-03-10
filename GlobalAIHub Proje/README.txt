@@ -19,22 +19,11 @@ CREATE TABLE `ordersystem` (
   `credit_cadt_password` varchar(45) CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
-
-
-
-
-#### Yapılan Yenilikler 
-    1) Pizza seçiminden sonra pizza boyutu seçimi eklendi
-    2) Pizza boyutunun seçimine göre fiyat hesaplaması eklendi
-    3) Ödeme ekranı için toplam hesaplama düzenlendi.Güncel
-    4) İçecek seçimi eklendi
-    5) İçecek seçiminden sonraki hesaplamalar düzenlendi
-    6) Database kaydı test edildi
-    7) Hatırlatma: Projeyi çalıştırmadan önce mysql server kurulu olduğundan emin olun.
-    
     
     -----------------------------------------------------------------------------------------------------------
+    
 *** Mysql sütun düzenleme kodları
+
 SELECT id as 'ID',
 credit_card_username as 'Kart Sahibi',
 userid as 'TC Kimlik',
